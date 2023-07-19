@@ -1,0 +1,14 @@
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL/Case 1 FINAL';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL/Case 1 FINAL' ;
+ampl: include SmartRailPhase2.run;
+ampl: include SmartRailSchedulePhase2.run;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL/Case 1 FINAL';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL/Case 1 FINAL' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL/Case 2 FINAL';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL/Case 2 FINAL' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL/Case 1 FINAL';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Smart Rail Phase 2 - FINAL/Case 1 FINAL' ;
+ampl: 
+ampl: reset;
+ampl: include SmartRailSchedulePhase2.run;
+ampl: 

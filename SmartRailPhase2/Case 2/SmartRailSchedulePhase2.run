@@ -1,0 +1,188 @@
+# This runfile solves the full SmartRail Network Problem in Phase 2
+# June 2nd
+# Authors: Max Rothfeder, Aidan Macaluso, Valentin de la Pena, Yetayal Tizale
+
+reset; 
+
+# Start log file
+option log_file SmartRail_Phase2_Case2.log;
+
+#Load the Model
+model SmartRailSchedulingPhase2.mod;
+
+#Load CSV capability
+load amplcsv.dll;
+
+#Load in each of the CSV files and their respective columns
+table modstations IN "amplcsv" "stations.csv": stations <- [stations], num_reload, x_coord, y_coord;
+table modtracks IN "amplcsv" "tracks.csv": tracks <- [to_station, from_station];
+table modshipments IN "amplcsv" "shipments.csv": shipments <- [shipments], orig, dest, volume, avail_day, deliv_day;
+table modother IN "amplcsv" "other_param.csv": [], cost_ship, capa_track, capa_reload, T, cost_penalty, cost_track, cost_new_reload, 
+max_reload, max_tracks;
+
+#Read each of the tables into the model 
+read table modstations;
+read table modtracks;
+read table modshipments;
+read table modother;
+
+
+# Choose solver and solve
+option solver cplex;
+option cplex_options 'mipgap 0';
+option display_precision 11; 
+solve;
+
+
+
+#Making results table 
+#This is a csv file that contains EVERY decision variable (even those that are 0)
+#SMARTRAIL can use this for their own analysis or if they prefer .csv files
+table result OUT "amplcsv" "SmartRailCompletePlan.csv":
+	[shipments, trackstart, trackend, day], x ~ volume; 
+	
+write table result; 
+
+# Display optimal solution
+#Note: We omit rows/cols with only zeros for ease of reading!!
+option omit_zero_rows 1;
+option omit_zero_cols 1;
+option display_precision 11; 
+display total_ship_cost;
+display new_track_cost; 
+display new_reload_cost; 
+display delay_cost;
+
+#Display shipping Schedule by Shipment (omit 0s)
+printf "\n Shipping Schedule by shipment: \n";
+for {s in shipments, d in 1 .. T} {
+  if sum{(i,j) in tracks} (x[s, d, i,j] + y[s, d, j, i]) >= 1 then
+  printf "\nContainer load per track for shipment %s on day %s :\n", s, d;
+  if sum{(i,j) in tracks} (x[s, d, i,j] + y[s, d, j, i]) >= 1 then
+  for {(i,j) in tracks: x[s, d, i, j] > 0} {
+     printf "  %3d --> %3d: %3d\n", i,j,x[s, d,i,j];
+   } 
+   for {(i,j) in tracks: y[s, d, j, i] > 0} {
+     printf "  %3d --> %3d: %3d\n", j,i, y[s, d, j, i];
+  }
+ 
+}
+
+#Display Shipping Schedule by Day (Omit 0s)
+printf "\n\n\n\n Shipping Schedule by day: \n\n";
+for {d in 1 .. T} {
+for {s in shipments} {
+  if sum{(i,j) in tracks} (x[s, d, i,j] + y[s, d, j, i]) >= 1 then
+  printf "\nContainer load per track for shipment %s on day %s :\n\n", s, d;
+  if sum{(i,j) in tracks} (x[s, d, i,j] + y[s, d, j, i]) >= 1 then
+  for {(i,j) in tracks: x[s, d, i, j] > 0} {
+     printf "  %3d --> %3d: %3d\n", i,j,x[s, d,i,j];
+   } 
+   for {(i,j) in tracks: y[s, d, j, i] > 0} {
+     printf "  %3d --> %3d: %3d\n", j,i, y[s, d, j, i];
+  }
+  }
+}
+
+#Display # of containers per track per day (Omit 0s)
+printf "\nTotal load per track:\n\n";
+for {d in 1 .. T} {
+  printf "Load on day %s \n", d;
+  for {(i, j) in tracks} {
+  if sum{s in shipments} (x[s,d, i,j] + y[s,d, j,i]) >= 1 then  
+  printf "%3d-->%3d: %3d with a maximum allowed of %d \n", i, j, 
+  	sum{s in shipments} (x[s,d, i,j] + y[s,d, j,i]), capa_track*(1+t[i, j]);
+}
+}
+
+#Display tracks that are at their maximum on a given day (Omit 0s)
+printf "\n Track at Maximum:\n\n";
+for {d in 1 .. T} {
+  printf "Load on day %s \n", d;
+  for {(i, j) in tracks} {
+  if sum{s in shipments} (x[s,d, i,j] + y[s,d, j,i]) == capa_track*(1+t[i, j]) then  
+  printf "%3d-->%3d: %3d with a maximum allowed of %d \n", i, j, 
+  	sum{s in shipments} (x[s,d, i,j] + y[s,d, j,i]), capa_track*(1+t[i, j]);
+}
+}
+
+#Display tracks where expansion was necessary to enable shipment schedule (Omit 0s)
+printf "\n Expansion Necessary for Tracks:\n\n";
+for {d in 1 .. T} {
+  printf "Load on day %s \n", d;
+  for {(i, j) in tracks} {
+  if sum{s in shipments} (x[s,d, i,j] + y[s,d, j,i]) > capa_track then  
+  printf "%3d-->%3d: %3d with a maximum allowed of %d \n", i, j, 
+  	sum{s in shipments} (x[s,d, i,j] + y[s,d, j,i]), capa_track*(1+t[i, j]);
+}
+}
+
+#Display reload per stations on each day (omit 0s)
+printf "\nTotal reload per station on each day:\n\n";
+for {d in 1 .. T, k in stations} {
+  if (sum {s in shipments, (i,k) in tracks} x[s, d, i,k] + 
+    sum {s in shipments, (k,i) in tracks} y[s, d, i,k]) >= 1 then
+  printf "On day %s at station %s \n There are %d containers being reloaded with a maximum allowed of %d \n\n", 
+  d, k,
+  sum {s in shipments, (i,k) in tracks} x[s, d, i,k] + 
+    sum {s in shipments, (k,i) in tracks} y[s, d, i,k], capa_reload * (r[k] + num_reload[k]); 
+    
+  }
+
+#Display reload per stations at their maximum per day (omit 0s)
+printf "\n Reload at Maximum \n\n";
+for {d in 1 .. T, k in stations} {
+   #printf "Reload on day %s at station %s \n", d, k;
+  if (sum {s in shipments, (i,k) in tracks} x[s, d, i,k] + 
+    sum {s in shipments, (k,i) in tracks} y[s, d, i,k]) == capa_reload * (r[k] + num_reload[k]) then
+  printf "On day %s at station %s \n There are %s containers being reloaded with a maximum allowed of %s \n\n", 
+  d, k,
+  sum {s in shipments, (i,k) in tracks} x[s, d, i,k] + 
+    sum {s in shipments, (k,i) in tracks} y[s, d, i,k], capa_reload * (r[k] + num_reload[k]); 
+    
+  }
+
+#Display reloading zones that had to be expanded to be feasible
+printf "\n Expansion Necessary for Reloads \n\n";
+for {d in 1 .. T, k in stations} {
+   #printf "Reload on day %s at station %s \n", d, k;
+  if (sum {s in shipments, (i,k) in tracks} x[s, d, i,k] + 
+    sum {s in shipments, (k,i) in tracks} y[s, d, i,k]) >= capa_reload * num_reload[k] then
+  printf "On day %s at station %s \n There are %s containers being reloaded with a maximum allowed of %s after expanding from %s allowed \n\n", 
+  d, k,
+  sum {s in shipments, (i,k) in tracks} x[s, d, i,k] + 
+    sum {s in shipments, (k,i) in tracks} y[s, d, i,k], capa_reload * (r[k] + num_reload[k]), 
+    capa_reload * num_reload[k]; 
+ }
+  
+
+
+
+#Delayed Shipments - Ignoring 0 delayed
+printf "\n Delayed Containers \n";
+for {s in shipments, d in 1 .. T: d > deliv_day[s] and del[s, d] >= 1} {
+printf "\n Delay Cost of shipment %s: \n", s;
+printf "There are %s late containers on day %s that were due on day %s \n\n",
+ del[s,d], d, deliv_day[s];
+}
+
+
+#Display the remaining decision variables!!!
+printf "\n New tracks Constructed  (i, j, # new tracks)\n";
+display t; 
+
+printf "\n New reload zones Constructed (station k, # new reload zones) \n";
+display r; 
+
+#This information is contained within the results above, but is helpful 
+#to see in the tables below!
+printf "\n Containers that Originate on day d for each shipment s\n";
+display ori;
+
+printf "\n Containers that are Delivered on day d for each shipment s\n";
+display del; 
+
+
+# Stop log file
+option log_file ’’;
+close;

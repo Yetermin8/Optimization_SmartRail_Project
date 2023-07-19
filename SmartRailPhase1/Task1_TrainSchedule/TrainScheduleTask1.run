@@ -1,0 +1,29 @@
+# This runfile solves the TrainProject Problem Task 1
+# 10 May 2023
+# Authors: Max Rothfeder, Aidan Macaluso, Valentin de la Pena, Yetayal Tizale
+
+
+reset; 
+
+# Start log file
+option log_file TrainScheduleTask1.log;
+
+#Load the Model
+model TrainScheduleTask1.mod;
+
+#Load the Data
+data TrainScheduleTask1.dat;
+
+# Choose solver and solve
+option solver cplex;
+solve;
+
+
+# Display optimal solution
+display x;
+
+# Stop log file
+option log_file ’’;
+close;
+
+reset; 

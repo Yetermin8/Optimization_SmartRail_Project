@@ -1,0 +1,49 @@
+# This runfile solves the full SmartRail Network Problem in Task 2
+# 10 May 2023
+# Authors: Max Rothfeder, Aidan Macaluso, Valentin de la Pena, Yetayal Tizale
+
+reset; 
+
+# Start log file
+option log_file SmartRailTrainSchedule.log;
+
+#Load the Model
+model SmartRailTrainSchedule.mod;
+
+#Load CSV capability
+load amplcsv.dll;
+
+#Load in each of the CSV files and their respective columns
+table modstations IN "amplcsv" "stations.csv": stations <- [stations], num_reload, x_coord, y_coord;
+table modtracks IN "amplcsv" "tracks.csv": tracks <- [to_station, from_station];
+table modshipments IN "amplcsv" "shipments.csv": shipments <- [shipments], orig, dest, volume;
+table modother IN "amplcsv" "other_param.csv": [], cost_ship, cost_reload, capa_track, capa_reload;
+
+#Read each of the tables into the model 
+read table modstations;
+read table modtracks;
+read table modshipments;
+read table modother;
+
+
+# Choose solver and solve
+option solver cplex;
+solve;
+
+#Making results table 
+#This is a csv file that contains EVERY decision variable (even those that are 0)
+#SMARTRAIL can use this for their own analysis or if they prefer .csv files
+table result OUT "amplcsv" "SmartRailCompletePlan.csv":
+	[shipments, trackstart, trackend], x ~ volume; 
+	
+write table result; 
+
+# Display optimal solution
+#Note: We omit rows/cols with only zeros for ease of reading!!
+option omit_zero_rows 1;
+option omit_zero_cols 1;
+display x;
+
+# Stop log file
+option log_file ’’;
+close;

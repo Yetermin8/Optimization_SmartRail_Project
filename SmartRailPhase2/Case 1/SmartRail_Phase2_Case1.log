@@ -1,0 +1,967 @@
+CPLEX 20.1.0.0: mipgap 0
+CPLEX 20.1.0.0: optimal integer solution; objective 38513829.76
+476 MIP simplex iterations
+0 branch-and-bound nodes
+total_ship_cost = 14931385.703
+
+new_track_cost = 21854444.06
+
+new_reload_cost = 168000
+
+delay_cost = 1560000
+
+
+ Shipping Schedule by shipment: 
+
+Container load per track for shipment Company_A_4_7 on day 1 :
+    4 -->   6:  10
+    4 -->   1:  10
+
+Container load per track for shipment Company_A_4_7 on day 2 :
+    1 -->   3:  10
+    4 -->   6:  10
+    6 -->   7:  10
+
+Container load per track for shipment Company_A_4_7 on day 3 :
+    3 -->   7:  10
+    6 -->   7:  10
+
+Container load per track for shipment Company_A_3_2 on day 3 :
+    3 -->   5:   5
+
+Container load per track for shipment Company_A_3_2 on day 4 :
+    5 -->   2:   5
+
+Container load per track for shipment Company_B_1_11 on day 8 :
+    1 -->   4:  10
+    1 -->   8:   8
+
+Container load per track for shipment Company_B_1_11 on day 9 :
+    1 -->   4:   2
+    1 -->   8:   8
+    4 -->   6:   9
+    4 -->   8:   1
+    8 -->   9:   8
+
+Container load per track for shipment Company_B_1_11 on day 10 :
+    1 -->   8:   8
+    4 -->   8:   2
+    6 -->   9:   9
+    8 -->   9:   9
+    9 -->  10:   8
+
+Container load per track for shipment Company_B_1_11 on day 11 :
+    8 -->   9:  10
+    9 -->  10:  18
+   10 -->  11:   8
+
+Container load per track for shipment Company_B_1_11 on day 12 :
+    9 -->  10:  10
+   10 -->  11:  18
+
+Container load per track for shipment Company_B_1_11 on day 13 :
+   10 -->  11:  10
+
+Container load per track for shipment Company_C_13_8 on day 5 :
+   13 -->  14:   3
+   13 -->   7:  10
+
+Container load per track for shipment Company_C_13_8 on day 6 :
+   13 -->  14:  10
+   14 -->  15:   1
+   14 -->   3:   2
+    7 -->   6:  10
+   13 -->   7:   8
+
+Container load per track for shipment Company_C_13_8 on day 7 :
+   13 -->  14:   2
+    3 -->   1:   2
+   14 -->   3:  10
+    6 -->   4:  10
+    7 -->   6:   8
+   15 -->  12:   1
+
+Container load per track for shipment Company_C_13_8 on day 8 :
+    1 -->   8:   2
+    4 -->   8:  10
+    3 -->   1:  10
+   14 -->   3:   2
+    6 -->   4:   8
+   12 -->   4:   1
+   13 -->   7:   9
+
+Container load per track for shipment Company_C_13_8 on day 9 :
+    1 -->   4:   8
+    1 -->   8:   2
+    4 -->   8:   9
+    3 -->   1:   2
+    7 -->   6:   9
+
+Container load per track for shipment Company_C_13_8 on day 10 :
+    1 -->   8:   2
+    4 -->   8:   8
+    6 -->   4:   9
+
+Container load per track for shipment Company_C_13_8 on day 11 :
+    4 -->   8:   9
+
+Container load per track for shipment Company_C_13_1 on day 4 :
+   13 -->  14:  10
+
+Container load per track for shipment Company_C_13_1 on day 5 :
+   13 -->  14:   7
+   14 -->   3:  10
+
+Container load per track for shipment Company_C_13_1 on day 6 :
+    3 -->   1:  10
+   14 -->   3:   7
+
+Container load per track for shipment Company_C_13_1 on day 7 :
+    3 -->   1:   7
+
+Container load per track for shipment Company_C_13_7 on day 2 :
+   13 -->   7:  10
+
+Container load per track for shipment Company_C_13_7 on day 3 :
+   13 -->   7:  10
+
+Container load per track for shipment Company_C_13_7 on day 4 :
+   13 -->   7:  10
+
+Container load per track for shipment Company_C_13_7 on day 6 :
+   13 -->   7:   2
+
+Container load per track for shipment Company_C_13_7 on day 7 :
+   13 -->   7:  10
+
+Container load per track for shipment Company_D_5_6 on day 11 :
+    5 -->   7:   6
+
+Container load per track for shipment Company_D_5_6 on day 12 :
+    7 -->   6:   6
+
+Container load per track for shipment Company_D_5_10 on day 5 :
+    5 -->  14:   1
+
+Container load per track for shipment Company_D_5_10 on day 6 :
+    5 -->   7:   2
+   14 -->  15:   1
+
+Container load per track for shipment Company_D_5_10 on day 7 :
+    5 -->   7:  10
+    7 -->   6:   2
+   15 -->   6:   1
+
+Container load per track for shipment Company_D_5_10 on day 8 :
+    5 -->   7:   1
+    6 -->   9:   3
+    7 -->   6:  10
+
+Container load per track for shipment Company_D_5_10 on day 9 :
+    5 -->   7:  10
+    6 -->   9:  10
+    9 -->  10:   3
+    7 -->   6:   1
+
+Container load per track for shipment Company_D_5_10 on day 10 :
+    5 -->   7:  10
+    6 -->   9:   1
+    9 -->  10:  10
+    7 -->   6:  10
+
+Container load per track for shipment Company_D_5_10 on day 11 :
+    6 -->   9:  10
+    9 -->  10:   1
+    7 -->   6:  10
+
+Container load per track for shipment Company_D_5_10 on day 12 :
+    6 -->   9:  10
+    9 -->  10:  10
+
+Container load per track for shipment Company_D_5_10 on day 13 :
+    9 -->  10:  10
+
+Container load per track for shipment Company_E_3_13 on day 1 :
+    3 -->  14:  10
+
+Container load per track for shipment Company_E_3_13 on day 2 :
+    3 -->  14:  10
+   14 -->  13:  10
+
+Container load per track for shipment Company_E_3_13 on day 3 :
+   14 -->  13:  10
+
+Container load per track for shipment Company_E_3_13 on day 6 :
+    3 -->  14:   1
+
+Container load per track for shipment Company_E_3_13 on day 7 :
+    3 -->   7:   1
+   14 -->  13:   1
+
+Container load per track for shipment Company_E_3_13 on day 8 :
+    3 -->   7:  10
+    3 -->  14:   8
+    7 -->  13:   1
+
+Container load per track for shipment Company_E_3_13 on day 9 :
+    7 -->  13:  10
+   14 -->  13:   8
+
+Container load per track for shipment Company_E_3_15 on day 9 :
+    3 -->  14:  10
+
+Container load per track for shipment Company_E_3_15 on day 10 :
+   14 -->  15:  10
+
+
+
+
+ Shipping Schedule by day: 
+
+
+Container load per track for shipment Company_A_4_7 on day 1 :
+
+    4 -->   6:  10
+    4 -->   1:  10
+
+Container load per track for shipment Company_E_3_13 on day 1 :
+
+    3 -->  14:  10
+
+Container load per track for shipment Company_A_4_7 on day 2 :
+
+    1 -->   3:  10
+    4 -->   6:  10
+    6 -->   7:  10
+
+Container load per track for shipment Company_C_13_7 on day 2 :
+
+   13 -->   7:  10
+
+Container load per track for shipment Company_E_3_13 on day 2 :
+
+    3 -->  14:  10
+   14 -->  13:  10
+
+Container load per track for shipment Company_A_4_7 on day 3 :
+
+    3 -->   7:  10
+    6 -->   7:  10
+
+Container load per track for shipment Company_A_3_2 on day 3 :
+
+    3 -->   5:   5
+
+Container load per track for shipment Company_C_13_7 on day 3 :
+
+   13 -->   7:  10
+
+Container load per track for shipment Company_E_3_13 on day 3 :
+
+   14 -->  13:  10
+
+Container load per track for shipment Company_A_3_2 on day 4 :
+
+    5 -->   2:   5
+
+Container load per track for shipment Company_C_13_1 on day 4 :
+
+   13 -->  14:  10
+
+Container load per track for shipment Company_C_13_7 on day 4 :
+
+   13 -->   7:  10
+
+Container load per track for shipment Company_C_13_8 on day 5 :
+
+   13 -->  14:   3
+   13 -->   7:  10
+
+Container load per track for shipment Company_C_13_1 on day 5 :
+
+   13 -->  14:   7
+   14 -->   3:  10
+
+Container load per track for shipment Company_D_5_10 on day 5 :
+
+    5 -->  14:   1
+
+Container load per track for shipment Company_C_13_8 on day 6 :
+
+   13 -->  14:  10
+   14 -->  15:   1
+   14 -->   3:   2
+    7 -->   6:  10
+   13 -->   7:   8
+
+Container load per track for shipment Company_C_13_1 on day 6 :
+
+    3 -->   1:  10
+   14 -->   3:   7
+
+Container load per track for shipment Company_C_13_7 on day 6 :
+
+   13 -->   7:   2
+
+Container load per track for shipment Company_D_5_10 on day 6 :
+
+    5 -->   7:   2
+   14 -->  15:   1
+
+Container load per track for shipment Company_E_3_13 on day 6 :
+
+    3 -->  14:   1
+
+Container load per track for shipment Company_C_13_8 on day 7 :
+
+   13 -->  14:   2
+    3 -->   1:   2
+   14 -->   3:  10
+    6 -->   4:  10
+    7 -->   6:   8
+   15 -->  12:   1
+
+Container load per track for shipment Company_C_13_1 on day 7 :
+
+    3 -->   1:   7
+
+Container load per track for shipment Company_C_13_7 on day 7 :
+
+   13 -->   7:  10
+
+Container load per track for shipment Company_D_5_10 on day 7 :
+
+    5 -->   7:  10
+    7 -->   6:   2
+   15 -->   6:   1
+
+Container load per track for shipment Company_E_3_13 on day 7 :
+
+    3 -->   7:   1
+   14 -->  13:   1
+
+Container load per track for shipment Company_B_1_11 on day 8 :
+
+    1 -->   4:  10
+    1 -->   8:   8
+
+Container load per track for shipment Company_C_13_8 on day 8 :
+
+    1 -->   8:   2
+    4 -->   8:  10
+    3 -->   1:  10
+   14 -->   3:   2
+    6 -->   4:   8
+   12 -->   4:   1
+   13 -->   7:   9
+
+Container load per track for shipment Company_D_5_10 on day 8 :
+
+    5 -->   7:   1
+    6 -->   9:   3
+    7 -->   6:  10
+
+Container load per track for shipment Company_E_3_13 on day 8 :
+
+    3 -->   7:  10
+    3 -->  14:   8
+    7 -->  13:   1
+
+Container load per track for shipment Company_B_1_11 on day 9 :
+
+    1 -->   4:   2
+    1 -->   8:   8
+    4 -->   6:   9
+    4 -->   8:   1
+    8 -->   9:   8
+
+Container load per track for shipment Company_C_13_8 on day 9 :
+
+    1 -->   4:   8
+    1 -->   8:   2
+    4 -->   8:   9
+    3 -->   1:   2
+    7 -->   6:   9
+
+Container load per track for shipment Company_D_5_10 on day 9 :
+
+    5 -->   7:  10
+    6 -->   9:  10
+    9 -->  10:   3
+    7 -->   6:   1
+
+Container load per track for shipment Company_E_3_13 on day 9 :
+
+    7 -->  13:  10
+   14 -->  13:   8
+
+Container load per track for shipment Company_E_3_15 on day 9 :
+
+    3 -->  14:  10
+
+Container load per track for shipment Company_B_1_11 on day 10 :
+
+    1 -->   8:   8
+    4 -->   8:   2
+    6 -->   9:   9
+    8 -->   9:   9
+    9 -->  10:   8
+
+Container load per track for shipment Company_C_13_8 on day 10 :
+
+    1 -->   8:   2
+    4 -->   8:   8
+    6 -->   4:   9
+
+Container load per track for shipment Company_D_5_10 on day 10 :
+
+    5 -->   7:  10
+    6 -->   9:   1
+    9 -->  10:  10
+    7 -->   6:  10
+
+Container load per track for shipment Company_E_3_15 on day 10 :
+
+   14 -->  15:  10
+
+Container load per track for shipment Company_B_1_11 on day 11 :
+
+    8 -->   9:  10
+    9 -->  10:  18
+   10 -->  11:   8
+
+Container load per track for shipment Company_C_13_8 on day 11 :
+
+    4 -->   8:   9
+
+Container load per track for shipment Company_D_5_6 on day 11 :
+
+    5 -->   7:   6
+
+Container load per track for shipment Company_D_5_10 on day 11 :
+
+    6 -->   9:  10
+    9 -->  10:   1
+    7 -->   6:  10
+
+Container load per track for shipment Company_B_1_11 on day 12 :
+
+    9 -->  10:  10
+   10 -->  11:  18
+
+Container load per track for shipment Company_D_5_6 on day 12 :
+
+    7 -->   6:   6
+
+Container load per track for shipment Company_D_5_10 on day 12 :
+
+    6 -->   9:  10
+    9 -->  10:  10
+
+Container load per track for shipment Company_B_1_11 on day 13 :
+
+   10 -->  11:  10
+
+Container load per track for shipment Company_D_5_10 on day 13 :
+
+    9 -->  10:  10
+
+Total load per track:
+
+Load on day 1 
+  1-->  4:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  6:  10 with a maximum allowed of 10 
+Load on day 2 
+  1-->  3:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  6:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+Load on day 3 
+  3-->  5:   5 with a maximum allowed of 10 
+  3-->  7:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+Load on day 4 
+  2-->  5:   5 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+Load on day 5 
+  3--> 14:  10 with a maximum allowed of 10 
+  5--> 14:   1 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+Load on day 6 
+  1-->  3:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  5-->  7:   2 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+ 14--> 15:   2 with a maximum allowed of 10 
+Load on day 7 
+  1-->  3:   9 with a maximum allowed of 10 
+  3-->  7:   1 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  6:  10 with a maximum allowed of 10 
+  5-->  7:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  6--> 15:   1 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 12--> 15:   1 with a maximum allowed of 10 
+ 13--> 14:   3 with a maximum allowed of 10 
+Load on day 8 
+  1-->  3:  10 with a maximum allowed of 10 
+  1-->  4:  10 with a maximum allowed of 10 
+  1-->  8:  10 with a maximum allowed of 10 
+  3-->  7:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  6:   8 with a maximum allowed of 10 
+  4-->  8:  10 with a maximum allowed of 10 
+  4--> 12:   1 with a maximum allowed of 10 
+  5-->  7:   1 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  6-->  9:   3 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+Load on day 9 
+  1-->  3:   2 with a maximum allowed of 10 
+  1-->  4:  10 with a maximum allowed of 10 
+  1-->  8:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  6:   9 with a maximum allowed of 10 
+  4-->  8:  10 with a maximum allowed of 10 
+  5-->  7:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  6-->  9:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+  8-->  9:   8 with a maximum allowed of 10 
+  9--> 10:   3 with a maximum allowed of 20 
+ 13--> 14:   8 with a maximum allowed of 10 
+Load on day 10 
+  1-->  8:  10 with a maximum allowed of 10 
+  4-->  6:   9 with a maximum allowed of 10 
+  4-->  8:  10 with a maximum allowed of 10 
+  5-->  7:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  6-->  9:  10 with a maximum allowed of 10 
+  8-->  9:   9 with a maximum allowed of 10 
+  9--> 10:  18 with a maximum allowed of 20 
+ 14--> 15:  10 with a maximum allowed of 10 
+Load on day 11 
+  4-->  8:   9 with a maximum allowed of 10 
+  5-->  7:   6 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  6-->  9:  10 with a maximum allowed of 10 
+  8-->  9:  10 with a maximum allowed of 10 
+  9--> 10:  19 with a maximum allowed of 20 
+ 10--> 11:   8 with a maximum allowed of 20 
+Load on day 12 
+  6-->  7:   6 with a maximum allowed of 10 
+  6-->  9:  10 with a maximum allowed of 10 
+  9--> 10:  20 with a maximum allowed of 20 
+ 10--> 11:  18 with a maximum allowed of 20 
+Load on day 13 
+  9--> 10:  10 with a maximum allowed of 20 
+ 10--> 11:  10 with a maximum allowed of 20 
+Load on day 14 
+
+ Track at Maximum:
+
+Load on day 1 
+  1-->  4:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  6:  10 with a maximum allowed of 10 
+Load on day 2 
+  1-->  3:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  6:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+Load on day 3 
+  3-->  7:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+Load on day 4 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+Load on day 5 
+  3--> 14:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+Load on day 6 
+  1-->  3:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+ 13--> 14:  10 with a maximum allowed of 10 
+Load on day 7 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  6:  10 with a maximum allowed of 10 
+  5-->  7:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+Load on day 8 
+  1-->  3:  10 with a maximum allowed of 10 
+  1-->  4:  10 with a maximum allowed of 10 
+  1-->  8:  10 with a maximum allowed of 10 
+  3-->  7:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  8:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+Load on day 9 
+  1-->  4:  10 with a maximum allowed of 10 
+  1-->  8:  10 with a maximum allowed of 10 
+  3--> 14:  10 with a maximum allowed of 10 
+  4-->  8:  10 with a maximum allowed of 10 
+  5-->  7:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  6-->  9:  10 with a maximum allowed of 10 
+  7--> 13:  10 with a maximum allowed of 10 
+Load on day 10 
+  1-->  8:  10 with a maximum allowed of 10 
+  4-->  8:  10 with a maximum allowed of 10 
+  5-->  7:  10 with a maximum allowed of 10 
+  6-->  7:  10 with a maximum allowed of 10 
+  6-->  9:  10 with a maximum allowed of 10 
+ 14--> 15:  10 with a maximum allowed of 10 
+Load on day 11 
+  6-->  7:  10 with a maximum allowed of 10 
+  6-->  9:  10 with a maximum allowed of 10 
+  8-->  9:  10 with a maximum allowed of 10 
+Load on day 12 
+  6-->  9:  10 with a maximum allowed of 10 
+  9--> 10:  20 with a maximum allowed of 20 
+Load on day 13 
+Load on day 14 
+
+ Expansion Necessary for Tracks:
+
+Load on day 1 
+Load on day 2 
+Load on day 3 
+Load on day 4 
+Load on day 5 
+Load on day 6 
+Load on day 7 
+Load on day 8 
+Load on day 9 
+Load on day 10 
+  9--> 10:  18 with a maximum allowed of 20 
+Load on day 11 
+  9--> 10:  19 with a maximum allowed of 20 
+Load on day 12 
+  9--> 10:  20 with a maximum allowed of 20 
+ 10--> 11:  18 with a maximum allowed of 20 
+Load on day 13 
+Load on day 14 
+
+Total reload per station on each day:
+
+On day 1 at station 1 
+ There are 10 containers being reloaded with a maximum allowed of 12 
+
+On day 1 at station 6 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 1 at station 14 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 2 at station 3 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 2 at station 6 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 2 at station 7 
+ There are 20 containers being reloaded with a maximum allowed of 36 
+
+On day 2 at station 13 
+ There are 10 containers being reloaded with a maximum allowed of 36 
+
+On day 2 at station 14 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 3 at station 5 
+ There are 5 containers being reloaded with a maximum allowed of 24 
+
+On day 3 at station 7 
+ There are 30 containers being reloaded with a maximum allowed of 36 
+
+On day 3 at station 13 
+ There are 10 containers being reloaded with a maximum allowed of 36 
+
+On day 4 at station 2 
+ There are 5 containers being reloaded with a maximum allowed of 12 
+
+On day 4 at station 7 
+ There are 10 containers being reloaded with a maximum allowed of 36 
+
+On day 4 at station 14 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 5 at station 3 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 5 at station 7 
+ There are 10 containers being reloaded with a maximum allowed of 36 
+
+On day 5 at station 14 
+ There are 11 containers being reloaded with a maximum allowed of 24 
+
+On day 6 at station 1 
+ There are 10 containers being reloaded with a maximum allowed of 12 
+
+On day 6 at station 3 
+ There are 9 containers being reloaded with a maximum allowed of 24 
+
+On day 6 at station 6 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 6 at station 7 
+ There are 12 containers being reloaded with a maximum allowed of 36 
+
+On day 6 at station 14 
+ There are 11 containers being reloaded with a maximum allowed of 24 
+
+On day 6 at station 15 
+ There are 2 containers being reloaded with a maximum allowed of 24 
+
+On day 7 at station 1 
+ There are 9 containers being reloaded with a maximum allowed of 12 
+
+On day 7 at station 3 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 7 at station 4 
+ There are 10 containers being reloaded with a maximum allowed of 36 
+
+On day 7 at station 6 
+ There are 11 containers being reloaded with a maximum allowed of 24 
+
+On day 7 at station 7 
+ There are 21 containers being reloaded with a maximum allowed of 36 
+
+On day 7 at station 12 
+ There are 1 containers being reloaded with a maximum allowed of 36 
+
+On day 7 at station 13 
+ There are 1 containers being reloaded with a maximum allowed of 36 
+
+On day 7 at station 14 
+ There are 2 containers being reloaded with a maximum allowed of 24 
+
+On day 8 at station 1 
+ There are 10 containers being reloaded with a maximum allowed of 12 
+
+On day 8 at station 3 
+ There are 2 containers being reloaded with a maximum allowed of 24 
+
+On day 8 at station 4 
+ There are 19 containers being reloaded with a maximum allowed of 36 
+
+On day 8 at station 6 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 8 at station 7 
+ There are 20 containers being reloaded with a maximum allowed of 36 
+
+On day 8 at station 8 
+ There are 20 containers being reloaded with a maximum allowed of 36 
+
+On day 8 at station 9 
+ There are 3 containers being reloaded with a maximum allowed of 24 
+
+On day 8 at station 13 
+ There are 1 containers being reloaded with a maximum allowed of 36 
+
+On day 8 at station 14 
+ There are 8 containers being reloaded with a maximum allowed of 24 
+
+On day 9 at station 1 
+ There are 2 containers being reloaded with a maximum allowed of 12 
+
+On day 9 at station 4 
+ There are 10 containers being reloaded with a maximum allowed of 36 
+
+On day 9 at station 6 
+ There are 19 containers being reloaded with a maximum allowed of 24 
+
+On day 9 at station 7 
+ There are 10 containers being reloaded with a maximum allowed of 36 
+
+On day 9 at station 8 
+ There are 20 containers being reloaded with a maximum allowed of 36 
+
+On day 9 at station 9 
+ There are 18 containers being reloaded with a maximum allowed of 24 
+
+On day 9 at station 10 
+ There are 3 containers being reloaded with a maximum allowed of 24 
+
+On day 9 at station 13 
+ There are 18 containers being reloaded with a maximum allowed of 36 
+
+On day 9 at station 14 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 10 at station 4 
+ There are 9 containers being reloaded with a maximum allowed of 36 
+
+On day 10 at station 6 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 10 at station 7 
+ There are 10 containers being reloaded with a maximum allowed of 36 
+
+On day 10 at station 8 
+ There are 20 containers being reloaded with a maximum allowed of 36 
+
+On day 10 at station 9 
+ There are 19 containers being reloaded with a maximum allowed of 24 
+
+On day 10 at station 10 
+ There are 18 containers being reloaded with a maximum allowed of 24 
+
+On day 10 at station 15 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 11 at station 6 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 11 at station 7 
+ There are 6 containers being reloaded with a maximum allowed of 36 
+
+On day 11 at station 8 
+ There are 9 containers being reloaded with a maximum allowed of 36 
+
+On day 11 at station 9 
+ There are 20 containers being reloaded with a maximum allowed of 24 
+
+On day 11 at station 10 
+ There are 19 containers being reloaded with a maximum allowed of 24 
+
+On day 11 at station 11 
+ There are 8 containers being reloaded with a maximum allowed of 24 
+
+On day 12 at station 6 
+ There are 6 containers being reloaded with a maximum allowed of 24 
+
+On day 12 at station 9 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 12 at station 10 
+ There are 20 containers being reloaded with a maximum allowed of 24 
+
+On day 12 at station 11 
+ There are 18 containers being reloaded with a maximum allowed of 24 
+
+On day 13 at station 10 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+On day 13 at station 11 
+ There are 10 containers being reloaded with a maximum allowed of 24 
+
+
+ Reload at Maximum 
+
+
+ Expansion Necessary for Reloads 
+
+On day 10 at station 10 
+ There are 18 containers being reloaded with a maximum allowed of 24 after expanding from 12 allowed 
+
+On day 11 at station 10 
+ There are 19 containers being reloaded with a maximum allowed of 24 after expanding from 12 allowed 
+
+On day 12 at station 10 
+ There are 20 containers being reloaded with a maximum allowed of 24 after expanding from 12 allowed 
+
+
+ Delayed Containers 
+
+ Delay Cost of shipment Company_B_1_11: 
+There are 10 late containers on day 14 that were due on day 13 
+
+
+ Delay Cost of shipment Company_C_13_8: 
+There are 11 late containers on day 10 that were due on day 9 
+
+
+ Delay Cost of shipment Company_C_13_8: 
+There are 10 late containers on day 11 that were due on day 9 
+
+
+ Delay Cost of shipment Company_C_13_8: 
+There are 9 late containers on day 12 that were due on day 9 
+
+
+ Delay Cost of shipment Company_C_13_7: 
+There are 10 late containers on day 8 that were due on day 7 
+
+
+ New tracks Constructed  (i, j, # new tracks)
+t :=
+9  10   1
+10 11   1
+;
+
+
+ New reload zones Constructed (station k, # new reload zones) 
+r [*] :=
+10  1
+;
+
+
+ Containers that Originate on day d for each shipment s
+ori [*,*] (tr)
+# $4 = Company_C_13_1
+# $5 = Company_C_13_7
+# $6 = Company_C_13_8
+# $7 = Company_D_5_10
+# $8 = Company_D_5_6
+# $9 = Company_E_3_13
+# $10 = Company_E_3_15
+:  Company_A_3_2 Company_A_4_7 Company_B_1_11   $4   $5   $6   $7  $8   $9  $10 :=
+1         0            20              0         0    0    0    0   0   10    0
+2         0            10              0         0   10    0    0   0   10    0
+3         5             0              0         0   10    0    0   0    0    0
+4         0             0              0        10   10    0    0   0    0    0
+5         0             0              0         7    0   13    1   0    0    0
+6         0             0              0         0    2   18    2   0    1    0
+7         0             0              0         0   10    2   10   0    1    0
+8         0             0             18         0    0    9    1   0   18    0
+9         0             0             10         0    0    0   10   0    0   10
+10        0             0              8         0    0    0   10   0    0    0
+11        0             0              0         0    0    0    0   6    0    0
+;
+
+
+ Containers that are Delivered on day d for each shipment s
+del [*,*] (tr)
+# $4 = Company_C_13_1
+# $5 = Company_C_13_7
+# $6 = Company_C_13_8
+# $7 = Company_D_5_10
+# $8 = Company_D_5_6
+# $9 = Company_E_3_13
+# $10 = Company_E_3_15
+:  Company_A_3_2 Company_A_4_7 Company_B_1_11   $4   $5   $6   $7  $8   $9  $10 :=
+3         0            10              0         0   10    0    0   0   10    0
+4         0            20              0         0   10    0    0   0   10    0
+5         5             0              0         0   10    0    0   0    0    0
+7         0             0              0        10    2    0    0   0    0    0
+8         0             0              0         7   10    0    0   0    1    0
+9         0             0              0         0    0   12    0   0    1    0
+10        0             0              0         0    0   11    3   0   18    0
+11        0             0              0         0    0   10   10   0    0   10
+12        0             0              8         0    0    9    1   0    0    0
+13        0             0             18         0    0    0   10   6    0    0
+14        0             0             10         0    0    0   10   0    0    0
+;
+

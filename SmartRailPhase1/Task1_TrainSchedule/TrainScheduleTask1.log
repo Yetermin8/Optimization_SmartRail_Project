@@ -1,0 +1,15 @@
+CPLEX 20.1.0.0: optimal integer solution; objective 1309489.279
+6 MIP simplex iterations
+0 branch-and-bound nodes
+absmipgap = 2.32831e-10, relmipgap = 1.77803e-16
+x :=
+A 1 3    4
+A 3 5    4
+A 4 1    4
+A 4 6   20
+A 5 7    4
+A 6 7   20
+B 3 5    5
+B 5 2    5
+;
+

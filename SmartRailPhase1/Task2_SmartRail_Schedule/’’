@@ -1,0 +1,11 @@
+ampl: reset;
+ampl: 
+ampl: include SmartRailTrainSchedule.run;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final/Task2_SmartRail_Schedule';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final/Task2_SmartRail_Schedule' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final/SmartRail_ScheduleSoftware';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final/SmartRail_ScheduleSoftware' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final' ;
+ampl: cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final/Task1_TrainSchedule';cd '/Users/maxrothfeder/Desktop/Sophmore Spring 23/IEMS 313/Train Project Final/Task1_TrainSchedule' ;
+ampl: 
+ampl: include TrainScheduleTask1.run;
